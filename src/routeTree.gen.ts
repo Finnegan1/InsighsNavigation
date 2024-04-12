@@ -15,6 +15,7 @@ import { createFileRoute } from '@tanstack/react-router'
 import { Route as rootRoute } from './routes/__root'
 import { Route as SignInImport } from './routes/signIn'
 import { Route as ProtectedImport } from './routes/_protected'
+import { Route as InsighsNavigationIndexImport } from './routes/InsighsNavigation/index'
 import { Route as ProtectedLayoutImport } from './routes/_protected/_layout'
 import { Route as ProtectedLayoutSurveysImport } from './routes/_protected/_layout/surveys'
 import { Route as ProtectedLayoutSettingsImport } from './routes/_protected/_layout/settings'
@@ -44,6 +45,11 @@ const SignInRoute = SignInImport.update({
 
 const ProtectedRoute = ProtectedImport.update({
   id: '/_protected',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const InsighsNavigationIndexRoute = InsighsNavigationIndexImport.update({
+  path: '/InsighsNavigation/',
   getParentRoute: () => rootRoute,
 } as any)
 
@@ -93,6 +99,10 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ProtectedLayoutImport
       parentRoute: typeof ProtectedImport
     }
+    '/InsighsNavigation/': {
+      preLoaderRoute: typeof InsighsNavigationIndexImport
+      parentRoute: typeof rootRoute
+    }
     '/_protected/_layout/settings': {
       preLoaderRoute: typeof ProtectedLayoutSettingsImport
       parentRoute: typeof ProtectedLayoutImport
@@ -121,6 +131,7 @@ export const routeTree = rootRoute.addChildren([
   SignInRoute,
   LandingPageLazyRoute,
   SignUpLazyRoute,
+  InsighsNavigationIndexRoute,
 ])
 
 /* prettier-ignore-end */
