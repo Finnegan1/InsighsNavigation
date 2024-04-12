@@ -16,13 +16,13 @@ export type PocketBaseContextType = {
     signOut: () => void,
 }
 
-const pocketBaseContext = createContext<PocketBaseContextType>({});
+const pocketBaseContext = createContext<PocketBaseContextType>({} as PocketBaseContextType);
 
 export const PocketBaseProvider = ({ children }: { children: React.ReactNode }) => {
 
     const pocketBase: TypedPocketBase = useMemo(() => new PocketBase(POCKETBASE_BASE_URL), [])
     const [token, setToken] = useState(pocketBase.authStore.token);
-    const [user, setUser] = useState(pocketBase.authStore.model);
+    const [_, setUser] = useState(pocketBase.authStore.model);
 
     useEffect(() => {
         return pocketBase.authStore.onChange((token, model) => {

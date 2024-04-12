@@ -1,4 +1,4 @@
-import { Link, useMatch, useRouterState } from "@tanstack/react-router";
+import { Link, useRouterState } from "@tanstack/react-router";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Package2Icon, SearchIcon } from "lucide-react";

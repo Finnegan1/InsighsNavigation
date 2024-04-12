@@ -113,7 +113,7 @@ export function Dashboard() {
   )
 }
 
-function ActivityIcon(props) {
+function ActivityIcon(props: any) {
   return (
     <svg
       {...props}
@@ -133,7 +133,7 @@ function ActivityIcon(props) {
 }
 
 
-function AlertTriangleIcon(props) {
+function AlertTriangleIcon(props: any) {
   return (
     <svg
       {...props}
@@ -155,7 +155,7 @@ function AlertTriangleIcon(props) {
 }
 
 
-function BarChart(props) {
+function BarChart(props: any) {
   return (
     <div {...props}>
       <ResponsiveBar
@@ -209,7 +209,7 @@ function BarChart(props) {
 }
 
 
-function BarChartIcon(props) {
+function BarChartIcon(props: any) {
   return (
     <svg
       {...props}
@@ -231,7 +231,7 @@ function BarChartIcon(props) {
 }
 
 
-function CheckCircleIcon(props) {
+function CheckCircleIcon(props: any) {
   return (
     <svg
       {...props}
@@ -252,7 +252,7 @@ function CheckCircleIcon(props) {
 }
 
 
-function ClockIcon(props) {
+function ClockIcon(props: any) {
   return (
     <svg
       {...props}
@@ -273,7 +273,7 @@ function ClockIcon(props) {
 }
 
 
-function FileTextIcon(props) {
+function FileTextIcon(props: any) {
   return (
     <svg
       {...props}
@@ -297,7 +297,7 @@ function FileTextIcon(props) {
 }
 
 
-function SmileIcon(props) {
+function SmileIcon(props: any) {
   return (
     <svg
       {...props}
@@ -320,7 +320,7 @@ function SmileIcon(props) {
 }
 
 
-function UserPlusIcon(props) {
+function UserPlusIcon(props: any) {
   return (
     <svg
       {...props}
@@ -343,7 +343,7 @@ function UserPlusIcon(props) {
 }
 
 
-function UsersIcon(props) {
+function UsersIcon(props: any) {
   return (
     <svg
       {...props}

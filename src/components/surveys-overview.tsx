@@ -2,7 +2,6 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { TableHead, TableRow, TableHeader, TableCell, TableBody, Table } from "@/components/ui/table"
 import { PaginationPrevious, PaginationItem, PaginationLink, PaginationEllipsis, PaginationNext, PaginationContent, Pagination } from "@/components/ui/pagination"
-import { Link } from "@tanstack/react-router"
 
 /**
 * @see https://v0.dev/t/cgCjTarm57K
@@ -120,7 +119,7 @@ export function SurveysOverview() {
   )
 }
 
-function EyeIcon(props) {
+function EyeIcon(props: any) {
   return (
     <svg
       {...props}
@@ -141,7 +140,7 @@ function EyeIcon(props) {
 }
 
 
-function FileEditIcon(props) {
+function FileEditIcon(props: any) {
   return (
     <svg
       {...props}
@@ -163,28 +162,7 @@ function FileEditIcon(props) {
 }
 
 
-function HomeIcon(props) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
-      <polyline points="9 22 9 12 15 12 15 22" />
-    </svg>
-  )
-}
-
-
-function SearchIcon(props) {
+function SearchIcon(props: any) {
   return (
     <svg
       {...props}
@@ -205,7 +183,7 @@ function SearchIcon(props) {
 }
 
 
-function TrashIcon(props) {
+function TrashIcon(props: any) {
   return (
     <svg
       {...props}

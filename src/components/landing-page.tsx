@@ -164,7 +164,7 @@ export function LandingPage() {
   )
 }
 
-function BarChartIcon(props) {
+function BarChartIcon(props: any) {
   return (
     <svg
       {...props}
@@ -186,7 +186,7 @@ function BarChartIcon(props) {
 }
 
 
-function CompassIcon(props) {
+function CompassIcon(props: any) {
   return (
     <svg
       {...props}
@@ -207,7 +207,7 @@ function CompassIcon(props) {
 }
 
 
-function MicroscopeIcon(props) {
+function MicroscopeIcon(props: any) {
   return (
     <svg
       {...props}
@@ -232,7 +232,7 @@ function MicroscopeIcon(props) {
 }
 
 
-function PencilIcon(props) {
+function PencilIcon(props: any) {
   return (
     <svg
       {...props}

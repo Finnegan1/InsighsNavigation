@@ -32,7 +32,7 @@ export function HeaderProtected() {
       <NavigationMenu>
         <NavigationMenuList>
           <NavigationMenuItem>
-            <Link to="/" legacyBehavior passHref>
+            <Link to="/">
               <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                 <Package2Icon className="w-6 h-6" />
 
@@ -41,7 +41,7 @@ export function HeaderProtected() {
             </Link>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <Link to="/" legacyBehavior passHref>
+            <Link to="/">
               <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                 Dashboard
               </NavigationMenuLink>
