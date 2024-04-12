@@ -18,6 +18,7 @@ const router = createRouter({
   context: {
     pocketBase: undefined!, // This will be set after we wrap the app in an PocketBaseProvider
   } as RouterContext,
+  basepath:"/InsightsNavigation/"
 })
 
 // Register the router instance for type safety

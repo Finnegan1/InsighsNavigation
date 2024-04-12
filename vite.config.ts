@@ -13,7 +13,4 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  base: "InsighsNavigation"
 })
-
-//base: "InsighsNavigation"
