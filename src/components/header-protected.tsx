@@ -18,14 +18,18 @@ import { usePocketBase } from "@/contexts/pocketBaseContext";
 import { UsersResponse } from "@/pocketbase-types";
 
 export function HeaderProtected() {
-    const navigate = useNavigate()
-    const pocketBase = usePocketBase().pocketBase
+  const navigate = useNavigate();
+  const pocketBase = usePocketBase().pocketBase;
 
-    const profileImage = pocketBase.authStore.model 
-      ? pocketBase.getFileUrl((pocketBase.authStore.model as UsersResponse), (pocketBase.authStore.model as UsersResponse).avatar, {})
-      : ""
+  const profileImage = pocketBase.authStore.model
+    ? pocketBase.getFileUrl(
+        pocketBase.authStore.model as UsersResponse,
+        (pocketBase.authStore.model as UsersResponse).avatar,
+        {}
+      )
+    : "";
 
-    console.log(pocketBase.authStore.model)
+  console.log(pocketBase.authStore.model);
 
   return (
     <div className="flex justify-between p-3">
@@ -51,12 +55,14 @@ export function HeaderProtected() {
             <NavigationMenuTrigger>Surveys</NavigationMenuTrigger>
             <NavigationMenuContent>
               <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-                <ListItem title="Survey Overview" href="/surveys">
-                  View all your surveys in one place
-                </ListItem>
-                <ListItem title="Create Survey" href="/surveys/create">
-                  Create a new survey
-                </ListItem>
+                <Link to="/surveys">
+                  <ListItem title="Survey Overview">
+                    View all your surveys in one place
+                  </ListItem>
+                </Link>
+                <Link to="/surveys">
+                  <ListItem title="Create Survey">Create a new survey</ListItem>
+                </Link>
               </ul>
             </NavigationMenuContent>
           </NavigationMenuItem>
@@ -85,7 +91,7 @@ export function HeaderProtected() {
             }}
             width="32"
             onClick={() => {
-              navigate({to: "/settings"})
+              navigate({ to: "/settings" });
             }}
           />
           <span className="sr-only">Toggle user menu</span>
